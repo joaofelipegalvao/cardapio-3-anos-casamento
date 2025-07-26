@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background: linear-gradient(135deg, #ffeef1 0%, #f8d7da 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.menu-container {
+  background: white;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+}
+
+.menu-header {
+  background: linear-gradient(135deg, #c73650 0%, #8b1538 100%);
+  color: white;
+  padding: 40px 30px;
+  text-align: center;
+  position: relative;
+}
+
+.menu-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="hearts" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><text x="10" y="15" text-anchor="middle" fill="rgba(255,255,255,0.1)" font-size="12">♥</text></pattern></defs><rect width="100" height="100" fill="url(%23hearts)"/></svg>');
+  opacity: 0.3;
+}
+
+.anniversary-text {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.menu-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.decorative-line {
+  width: 100px;
+  height: 2px;
+  background: white;
+  margin: 0 auto;
+  position: relative;
+}
+
+.decorative-line::before,
+.decorative-line::after {
+  content: '♦';
+  position: absolute;
+  top: -8px;
+  color: white;
+  font-size: 16px;
+}
+
+.decorative-line::before {
+  left: -20px;
+}
+
+.decorative-line::after {
+  right: -20px;
+}
+
+.menu-content {
+  padding: 40px 30px;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  color: #c73650;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+  text-align: center;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 1px;
+  background: #c73650;
+}
+
+.dish {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dish:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.dish-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+  border: 3px solid #c73650;
+}
+
+.dish-info {
+  flex: 1;
+}
+
+.dish-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.dish-price {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  color: #c73650;
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-style: italic;
+}
+
+.dish-description {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.beverages-desserts {
+  margin-top: 30px;
+}
+
+.beverages,
+.desserts {
+  background: #f9f9f9;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.subsection-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  color: #c73650;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.item-list {
+  list-style: none;
+}
+
+.item-list li {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+  padding-left: 15px;
+  position: relative;
+  line-height: 1.4;
+}
+
+.item-list li .dish-price {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 14px;
+}
+
+.item-list li::before {
+  content: '♥';
+  position: absolute;
+  left: 0;
+  color: #c73650;
+  font-size: 10px;
+}
+
+.footer-message {
+  text-align: center;
+  padding: 30px;
+  background: linear-gradient(135deg, #c73650 0%, #8b1538 100%);
+  color: white;
+  font-style: italic;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .menu-container {
+    margin: 10px;
+  }
+
+  .menu-header {
+    padding: 30px 20px;
+  }
+
+  .menu-title {
+    font-size: 36px;
+  }
+
+  .menu-content {
+    padding: 30px 20px;
+  }
+
+  .dish {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .dish-image {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .beverages-desserts {
+    gap: 20px;
+  }
+}
